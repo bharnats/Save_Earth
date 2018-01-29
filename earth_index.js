@@ -1,10 +1,13 @@
 // Get references to the tbody element, input field and button
 var $tbody = document.querySelector("tbody");
 var $dateTime = document.querySelector("#dateTime");
-var $searchBtn = document.querySelector("#search");
+var $searchBtn1 = document.querySelector("#search1");
+var $searchBtn2 = document.querySelector("#search2");
+var $city = document.querySelector("#city");
 
 // Add an event listener to the searchButton, call handleSearchButtonClick when clicked
-$searchBtn.addEventListener("click", handleSearchButtonClick);
+$searchBtn1.addEventListener("click", handleSearchButtonClickDate);
+$searchBtn2.addEventListener("click", handleSearchButtonClickCity);
 
 // Set alienData to dataset initially
 var alienData = dataSet;
@@ -27,8 +30,11 @@ function renderTable() {
   }
 }
 
-function handleSearchButtonClick() {
+function handleSearchButtonClickDate() {
   // Format the user's search by removing leading and trailing whitespace, lowercase the string
+  if ($dateTime.value.length==0){
+      renderTable()
+  } else{
   var filterDateTime = $dateTime.value.trim().toLowerCase();
 
   // Set filteredAddresses to an array of all addresses whose "state" matches the filter
@@ -39,7 +45,23 @@ function handleSearchButtonClick() {
     return dateTime === filterDateTime;
   });
   renderTable();
-}
+}}
+function handleSearchButtonClickCity() {
+  // Format the user's search by removing leading and trailing whitespace, lowercase the string
+ $dateTime.value="";
+  var filterCity= $city.value.trim().toLowerCase();
+
+  // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+  alienData = dataSet.filter(function(alien) {
+    var alienCity = alien.city.toLowerCase();
+
+    // If true, add the alien to the filterDateTime, otherwise don't add it to filterDateTime
+    return alienCity=== filterCity ;
+  
+ });
+  renderTable();
+
 
 // Render the table for the first time on page load
+}
 renderTable();
