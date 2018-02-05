@@ -141,7 +141,7 @@ alienData = alienData.filter(function(alienCountry){
   return Country === filterCountry;
 })};
 var k = document.getElementById("selectShape").selectedIndex;
-if(z != 0){
+if(k != 0){
 alienData = alienData.filter(function(alienShape){
   var Shape = alienShape.shape.toLowerCase();
   return Shape === filterShape;
