@@ -6,7 +6,7 @@ The extra-terrestrial menace has come to Earth and **www.ALIENS-R-REAL.com** has
 web develper, all I need to do is put this information online for the world to see and then the matter will finally be put to rest.
 
 
-The collection is too large to search through manually. Hence, I developed a javascript code that will create a table dynamically based upon a [dataset we provide](/new_data.js). We also need to allow our users to search through the table for specific pieces of information. There's a catch though... We only use pure JavaScript, HTML, and CSS on our web pages. They are the only coding languages which can be trusted !!
+The collection is too large to search through manually. Hence, I developed a javascript code that will create a table dynamically based upon a [dataset](/new_data.js). We also need to allow our users to search through the table for specific pieces of information. There's a catch though... We only use pure JavaScript, HTML, and CSS on our web pages. They are the only coding languages which can be trusted !!
 
 ### Automatic Table and Multiple Search Categories
 
@@ -19,5 +19,3 @@ The collection is too large to search through manually. Hence, I developed a jav
   3. `state`
   4. `country`
   5. `shape`
-
-
