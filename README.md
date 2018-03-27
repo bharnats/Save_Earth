@@ -19,3 +19,6 @@ The collection is too large to search through manually. Hence, I developed a jav
   3. `state`
   4. `country`
   5. `shape`
+  
+  Finally, The app is deployed to GitHub Pages
+  https://bharnats.github.io/UFO_Sightings-Save_Earth/
